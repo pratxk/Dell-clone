@@ -1,8 +1,8 @@
-<h1 align="center" id="title">Lap-Den</h1>
+<h1 align="center" id="title">Dell</h1>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/99709583/221476639-92e18c11-9273-4b67-862c-d65069543a4a.png" alt="project-image" height="200/"></p>
 
-<p id="description">Lap-Den is Dell Technologies' official website where customers can buy their products, access support resources, and get the latest news and insights on technology and business.<br><br><b>This is a collaborative project of 5 members</b><br><br>- Abhay Faldu (Team Lead)<br>- Singh Guarav<br>- Bipin Singh <br>- Deepak Kumar  <br>- Anurag Raj </p>
+<p id="description">Dell  Clone is Dell Technologies' official website where customers can buy their products, access support resources, and get the latest news and insights on technology and business</p>
 
 <h2>🌐See Live</h2>
 
@@ -71,3 +71,4 @@ Technologies used in the project:
 <h2>Special Thanks 😊</h2>
 
 <p>Thanks Masai School for giving us this opportunity to show and deploy our skills to explore ideas and learn new things about project-making </p>
+# Dell-clone
