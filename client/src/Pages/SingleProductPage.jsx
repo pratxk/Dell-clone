@@ -180,7 +180,7 @@ export default function SingleProductPage() {
 								color={"blue"}
 								textAlign={"left"}
 							>
-								Click "Buy Now" to shop this product on LAP-DEN.com
+								Click "Buy Now" to shop this product on Dell.com
 							</Text>
 						</Flex>
 					</Stack>

@@ -106,7 +106,7 @@ export default function LargeWithLogoCentered() {
 				>
 					<Stack direction={"row"} spacing={6}>
 						<ListHeader>
-							<Link href={"#"}>LAP-DEN Technologies</Link>
+							<Link href={"#"}>Dell Technologies</Link>
 						</ListHeader>
 						<ListHeader>
 							<Link href={"#"}>Premier</Link>

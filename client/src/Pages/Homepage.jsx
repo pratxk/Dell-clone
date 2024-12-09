@@ -3,6 +3,8 @@ import {
 	Button,
 	Container,
 	Flex,
+	Grid,
+	GridItem,
 	Heading,
 	Image,
 	Modal,
@@ -30,6 +32,8 @@ import homeImage4 from "../Utils/homeImage4.png";
 import homeImage5 from "../Utils/homeImage5.png";
 import homeImage6 from "../Utils/homeImage6.png";
 import home_card_1_image from "../Utils/home_card_1_image.png";
+import ServiceList from "../Components/Service/ServiceList";
+import { Learn_Card } from "../Components/Home/LearnCard";
 
 const Homepage = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -43,6 +47,9 @@ const Homepage = () => {
 				body={"Get instant dsicounts up to  ₹2,000 on UPI & No Cost EMI."}
 				img={homeImage1}
 			/>
+			<Box backgroundColor={'#0a0e14'}>
+				<ServiceList />
+			</Box>
 			<Flex
 				maxW={"7xl"}
 				p={4}
@@ -225,7 +232,7 @@ const Homepage = () => {
 									fontWeight={"normal"}
 									variant={"link"}
 									colorScheme={"blue"}
-									_hover={{textDecor:"none"}}
+									_hover={{ textDecor: "none" }}
 								>
 									Learn More
 								</Button>
@@ -251,6 +258,50 @@ const Homepage = () => {
 						</Flex>
 					</Stack>
 				</Stack>
+					<Box backgroundColor={'#002a58'} pl={[10, , 15, 20, 28]} pr={28} pt={20} pb={'60px'}>
+						<Stack backgroundColor={'transparent'} color={'white'} align={'left'} w={'lg'} mb={4}>
+							<Text fontSize={'md'} fontWeight={500}>Learn from Dell Technologies</Text>
+							<Text fontSize={'5xl'} fontWeight={200}>What's Happening</Text>
+						</Stack>
+
+						<Grid templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 2fr)', 'repeat(2, 2fr)', 'repeat(4, 1fr)']} gap={3}>
+							<GridItem >
+								<Learn_Card url={'https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/na/whats-happening/uhp-whats-happening-whatwedo-480x360.jpg?wid=480&amp;hei=360'}
+									head={'What We Do'} subHead={'Learn More'} />
+							</GridItem>
+							<GridItem >
+								<Learn_Card url={'https://i.dell.com/is/image/DellContent/content/dam/ss2/non-product-images/lifestyle/gettyimages-1182617831-pr7530t-480x360.jpg?wid=480&hei=360'}
+									head={'Four Keys to Optimal Outcomes with Generative AI'} subHead={'Read the Article'} />
+							</GridItem>
+							<GridItem >
+								<Learn_Card url={'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/031424-tl-data-dna-480x360.jpg?wid=480&hei=360'}
+									head={'Building your innovation muscle in the era of AI'} subHead={'Read Report'} />
+							</GridItem>
+							<GridItem >
+								<Learn_Card url={'https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/lifestyle-shutterstock-555069979-480x360.jpg?wid=480&hei=360'}
+									head={'Our Purpose in Action'} subHead={'Read the Report'} />
+							</GridItem>
+						</Grid>
+					</Box>
+					<Box backgroundColor={'#21456e'} m={0} p={8} pt={16} pb={16} display={'flex'} flexDir={['column-reverse', 'column-reverse', 'row', 'row', 'row']} justifyContent={'space-evenly'} alignItems={['left', 'left', 'center']}>
+						<Box p={4} w={'350px'} color={'white'}>
+							<Box>
+								<Text>DELL REWARDS FOR BUSINESS</Text>
+								<Heading mt={4} fontWeight={400}>Buy More. Get More.</Heading>
+								<Text mt={8}>Get rewarded on your purchase for your next buy at Dell.co.in. *Terms and conditions apply.
+								</Text>
+							</Box>
+							<br />
+							<Button fontWeight={500} w={'130px'} h={'50px'} rounded={0} backgroundColor={'#237dca'} color={'white'} _hover={{ backgroundColor: 'blue.400' }}>
+								Learn More
+							</Button>
+						</Box>
+
+						<Box w={'50%'}>
+							<Image src='https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/en/programs-and-loyalty/pan-dell-woman-on-train-1200x675.jpg?fmt=png-alpha&wid=1200&hei=675' h={'100%'} />
+						</Box>
+
+					</Box>
 			</Container>
 			<Box
 				position="fixed"
@@ -280,7 +331,7 @@ const Homepage = () => {
 				>
 					<ModalOverlay />
 					<ModalContent>
-						<ModalHeader>LAP-DEN Cookie Preference</ModalHeader>
+						<ModalHeader>Dell Cookie Preference</ModalHeader>
 						<ModalCloseButton />
 						<ModalBody>
 							<Text>

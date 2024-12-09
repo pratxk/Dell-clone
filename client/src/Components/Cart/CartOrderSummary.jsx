@@ -24,17 +24,18 @@ const OrderSummaryItem = (props) => {
 
 export const CartOrderSummary = () => {
   const { products } = useSelector((store) => store.CartReducer);
-
+  console.log(products)
   const sum = products.reduce((accumulator, object) => {
     return accumulator + Number(object.discounted_price) * Number(object.items);
   }, 0);
-
+  console.log(sum)
   let tax;
   products.length === 0
     ? (tax = 0)
     : (tax = Math.floor(Math.random() * (400 - 100) + 50));
 
   let total = tax + sum;
+  console.log(total)
   localStorage.setItem("tax", JSON.stringify(tax));
 
 
@@ -49,7 +50,7 @@ export const CartOrderSummary = () => {
           <Text>{tax}</Text>
         </OrderSummaryItem>
         <OrderSummaryItem label="Coupon Code">
-          <Text fontWeight={"bold"}>LAPDEN2023</Text>
+          <Text fontWeight={"bold"}>DELL2024</Text>
         </OrderSummaryItem>
         <Flex justify="space-between">
           <Text fontSize="lg" fontWeight="semibold">

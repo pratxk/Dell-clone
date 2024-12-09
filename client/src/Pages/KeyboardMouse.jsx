@@ -95,7 +95,7 @@ const KeyboardMouse = () => {
                   </CardBody>
                   <Box textAlign={"left"} p={4}>
                     <Text fontSize={"sm"}>
-                      Click "Buy Now" to shop this product on Lapden.com (Lapden
+                      Click "Buy Now" to shop this product on Dell.com (Dell
                       Assured)
                     </Text>
                     <Button colorScheme={"twitter"} w="100%">

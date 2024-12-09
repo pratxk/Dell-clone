@@ -9,7 +9,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import logo from "../../Utils/logo.png";
+import logo from "../../Utils/Dell_logo.jpg";
 
 export const OrderS = () => {
   return (

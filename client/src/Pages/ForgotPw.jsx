@@ -82,7 +82,7 @@ const ForgotPw = () => {
 
             <Heading>Forgot Password</Heading>
             <Text fontWeight={400} fontSize={[12, 14, 16]}>
-              Enter the email address associated with your LapDen account to
+              Enter the email address associated with your Dell account to
               receive reset link
             </Text>
 
@@ -126,7 +126,7 @@ const ForgotPw = () => {
           </VStack>
         </VStack>
         <VStack w="full" h="full" p={10} spacing={10} bg={"gray.50"}>
-          <Heading>LapDen Account Benefits</Heading>
+          <Heading>Dell Account Benefits</Heading>
           <Text color={"gray.500"}>
             My Account is an easy, more centralized way to manage your tech.
             Sign Up Now!

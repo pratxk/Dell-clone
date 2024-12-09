@@ -122,7 +122,7 @@ const Search = () => {
 					type="text"
 					onFocus={handleInputFocus}
 					onBlur={handleInputBlur}
-					placeholder="Search LAP-DEN"
+					placeholder="Search Dell"
 					value={keyword}
 					onChange={handleInputChange}
 					onKeyPress={handleInputKeyPress}

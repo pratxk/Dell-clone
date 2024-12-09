@@ -54,55 +54,49 @@ exports.registerController = async (req, res) => {
 // user login
 
 exports.loginController = async (req, res) => {
-	try {
-		const { email, password } = req.body;
-		if (!email || !password) {
-			res
-				.status(404)
-				.send({ success: false, message: "Invalid Email or Password" });
-		}
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            return res.status(400).send({ success: false, message: "Email and password are required" });
+        }
 
-		//check user
+        // Normalize email
+        const normalizedEmail = email.trim().toLowerCase();
 
-		const user = await userModel.findOne({ email });
-		if (!user) {
-			return res
-				.status(404)
-				.send({ success: false, message: "Email is not registered" });
-		}
+        // Check user existence
+        const user = await userModel.findOne({ email: normalizedEmail });
+        console.log(user); // Debugging
+        if (!user) {
+            return res.status(404).send({ success: false, message: "Email is not registered" });
+        }
 
-		// check  password
-		const match = await comparePassword(password, user.password);
-		if (!match) {
-			return res.status(200).send({
-				success: false,
-				message: "Invalid Email or Password",
-			});
-		}
+        // Check password
+        const match = await comparePassword(password, user.password);
+        if (!match) {
+            return res.status(400).send({ success: false, message: "Invalid Email or Password" });
+        }
 
-		// token
-		const token = await JWT.sign({ _id: user._id }, process.env.SECRET_KEY, {
-			expiresIn: "7d",
-		});
+        // Generate token
+        const token = JWT.sign({ _id: user._id }, process.env.SECRET_KEY, { expiresIn: "7d" });
 
-		res.status(200).send({
-			success: true,
-			message: "login successful",
-			user: {
-				id: user._id,
-				first_name: user.first_name,
-				last_name: user.last_name,
-				email: user.email,
-				role: user.role,
-			},
-			token,
-		});
-	} catch (error) {
-		return res
-			.status(404)
-			.send({ success: false, message: "Email is not registered" });
-	}
+        res.status(200).send({
+            success: true,
+            message: "Login successful",
+            user: {
+                id: user._id,
+                first_name: user.first_name,
+                last_name: user.last_name,
+                email: user.email,
+                role: user.role,
+            },
+            token,
+        });
+    } catch (error) {
+        console.error(error); // Debugging
+        res.status(500).send({ success: false, message: "Something went wrong" });
+    }
 };
+
 
 //  get single user admin
 exports.singleUser = async (req, res) => {
@@ -246,9 +240,9 @@ exports.sendUserPasswordResetEmail = async (req, res) => {
 		//link for user
 		const link = `http://localhost:3000/users/saveforgotpassword/${user._id}/${token}`;
 		let info = await transporter.sendMail({
-			from: "bipinecommerce@gmail.com",
+			from: "simpleorders24x7@gmail.com",
 			to: user.email,
-			subject: "LAPDEN - Password Reset Link",
+			subject: "Dell - Password Reset Link",
 			html: `<a href=${link}>Click Here</a> to Reset Your Password`,
 		});
 		res

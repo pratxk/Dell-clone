@@ -180,7 +180,7 @@ const Login = () => {
               Send One-time Password
             </Button>
             <Text align={"center"}>
-              Don't have a LapDen account?{" "}
+              Don't have a Dell account?{" "}
               <Link
                 _hover={{
                   textDecoration: "underline",
@@ -195,7 +195,7 @@ const Login = () => {
           </VStack>
         </VStack>
         <VStack w="full" h="full" p={10} spacing={10} bg={"gray.50"}>
-          <Heading>LapDen Account Benefits</Heading>
+          <Heading>Dell Account Benefits</Heading>
           <Text color={"gray.500"}>
             My Account is an easy, more centralized way to manage your tech.
             Sign Up Now!

@@ -20,6 +20,7 @@ import NotFound from "../Pages/NotFound";
 import ProductList from "../Pages/ProductList";
 import SignUp from "../Pages/SignUp";
 import SingleProductPage from "../Pages/SingleProductPage";
+import PrivateRoute from "../Components/Home/PrivateRoute";
 
 const AllRoutes = () => {
 	return (
@@ -42,10 +43,12 @@ const AllRoutes = () => {
 					</>
 				}
 			></Route>
-			<Route path="/dashboard" element={<Dashboard />}></Route>
-			<Route path="/addproduct" element={<AddProduct />}></Route>
-			<Route path="/adminstore" element={<AdminStore />}></Route>
-			<Route path="/admincustomer" element={<AdminCustomer />}></Route>
+			<Route path="/dashboard" element={<PrivateRoute>
+				<Dashboard />
+			</PrivateRoute>}></Route>
+			<Route path="/addproduct" element={<PrivateRoute><AddProduct /></PrivateRoute>}></Route>
+			<Route path="/adminstore" element={<PrivateRoute><AdminStore /></PrivateRoute>}></Route>
+			<Route path="/admincustomer" element={<PrivateRoute><AdminCustomer /></PrivateRoute>}></Route>
 			<Route path="*" element={<NotFound />}></Route>
 			<Route path="/login" element={<Login />}></Route>
 			<Route path="/register" element={<SignUp />}></Route>

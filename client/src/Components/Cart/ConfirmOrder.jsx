@@ -44,7 +44,7 @@ export const ConfirmOrder = () => {
           <Text>{x}</Text>
         </OrderSummaryItem>
         <OrderSummaryItem label="Coupon Code">
-          <Text fontWeight={"bold"}>LAPDEN2023</Text>
+          <Text fontWeight={"bold"}>DELL2024</Text>
         </OrderSummaryItem>
         <Flex justify="space-between">
           <Text fontSize="lg" fontWeight="semibold">

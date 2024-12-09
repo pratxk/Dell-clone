@@ -30,7 +30,7 @@ import {
 } from "react-icons/fi";
 import { AiOutlineUsergroupAdd, AiOutlineFolderAdd } from "react-icons/ai";
 import { MdOutlineStoreMallDirectory } from "react-icons/md";
-import image from "../Utils/logo.png";
+import image from "../Utils/Dell_logo.jpg";
 import { NavLink, useNavigate } from "react-router-dom";
 import AdminImage from "./Utils/admin.png";
 
@@ -94,7 +94,8 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <Image
           src={image}
           alt="logo"
-          width={"160px"}
+          p={4}
+          width={"200px"}
           bg={"white"}
           rounded={"lg"}
         />

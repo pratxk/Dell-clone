@@ -168,7 +168,7 @@ const ChangePw = () => {
           </VStack>
         </VStack>
         <VStack w="full" h="full" p={10} spacing={10} bg={"gray.50"}>
-          <Heading>LapDen Account Benefits</Heading>
+          <Heading>Dell Account Benefits</Heading>
           <Text color={"gray.500"}>
             My Account is an easy, more centralized way to manage your tech.
             Sign Up Now!

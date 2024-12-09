@@ -19,6 +19,38 @@ exports.createCart = async (req, res) => {
   }
 };
 
+
+// update cart item quantity
+
+exports.updateCartItemQuantity = async (req, res) => {
+  try {
+    const { id } = req.params; // item ID to be updated
+    const { items } = req.body; // new quantity
+
+    const updatedCartItem = await CartModel.findByIdAndUpdate(
+      id,
+      { items },
+      { new: true } // Return the updated document
+    );
+
+    if (!updatedCartItem) {
+      return res.status(404).send({ success: false, message: "Item not found" });
+    }
+
+    res.status(200).send({
+      success: true,
+      message: "Quantity updated successfully",
+      updatedCartItem,
+    });
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      message: "Something went wrong",
+      error: error.message,
+    });
+  }
+};
+
 // get all carts only admin
 
 exports.getAllCartData = async (req, res) => {

@@ -1,7 +1,7 @@
 import { Container, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../Utils/logo.png";
+import logo from "../../Utils/Dell_logo.jpg";
 
 const CartLogo = () => {
 	const navigate = useNavigate();

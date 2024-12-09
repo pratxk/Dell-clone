@@ -95,7 +95,7 @@ const Support = () => {
 						lineHeight="shorter"
 						letterSpacing="tight"
 					>
-						LAP-DEN Support
+						Dell Support
 					</Text>
 					<Text
 						mb={6}

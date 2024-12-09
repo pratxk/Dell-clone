@@ -14,7 +14,7 @@ import {
   useBreakpointValue,
   Stack,
 } from "@chakra-ui/react";
-import logo from "../../Utils/logo.png";
+import logo from "../../Utils/Dell_logo.jpg";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { ConfirmOrder } from "./ConfirmOrder";

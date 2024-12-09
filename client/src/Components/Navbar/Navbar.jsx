@@ -26,7 +26,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbWorld } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../Utils/logo.png";
+import logo from "../../Utils/Dell2.svg";
 import "./Navbar.modules.css";
 import Search from "./Search";
 import MobileNav from "./MobileNav";
@@ -198,7 +198,7 @@ export default function Navbar() {
 												backgroundColor: "#0076cecc",
 											}}
 										>
-											Welcome to LAP-DEN
+											Welcome to Dell Technologies
 										</Button>
 									</MenuItem>
 									<MenuItem>

@@ -1,5 +1,5 @@
+const dotenv = require("dotenv").config();
 const express = require("express");
-require("dotenv").config();
 const connectDB = require("./configs/db");
 const cors = require("cors");
 const colors = require("colors");
@@ -15,17 +15,19 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const PORT = process.env.PORT || 3000
+
 // swaggerUi docs
 const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Lap-Den Documentation",
+      title: "Dell Documentation",
       version: "1.0.0",
     },
     servers: [
       {
-        url: "http://localhost:8080",
+        url: "http://localhost:3000",
       },
     ],
   },
@@ -41,11 +43,11 @@ app.use("/products",productRoute)
 app.use("/cart", cartRoute);
 //default home
 
-// app.use("/", (req, res) => {
-//   res.status(200).send("Home Page");
-// });
+app.use("/", (req, res) => {
+  res.status(200).send("Home Page");
+});
 
-app.listen(process.env.port, async () => {
+app.listen(PORT, async () => {
   try {
     await connectDB;
     console.log(colors.rainbow("DB connected"));
@@ -53,7 +55,7 @@ app.listen(process.env.port, async () => {
     console.log(error);
   }
   console.log(
-    `Your server is listening to http://localhost:${process.env.port}`.bgWhite
+    `Your server is listening to http://localhost:${PORT}`.bgWhite
       .red
   );
 });
