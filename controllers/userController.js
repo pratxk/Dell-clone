@@ -222,7 +222,7 @@ exports.sendUserPasswordResetEmail = async (req, res) => {
 				.status(201)
 				.send({ success: false, message: "Please Enter Email" });
 		}
-		const user = await userModel.findOne({ email: email });
+		const user = await userModel.findOne({ email });
 
 		if (!user) {
 			return res

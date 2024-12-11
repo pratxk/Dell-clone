@@ -15,7 +15,7 @@ import {
   Stack,
   Link,
 } from "@chakra-ui/react";
-import logo from "../Utils/logo.png";
+import logo from "../Utils/Dell2.svg"
 import laptop from "../Utils/laptop.avif";
 import { Search2Icon, EmailIcon } from "@chakra-ui/icons";
 import PersonIcon from "@mui/icons-material/Person";

@@ -25,7 +25,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import axios from "axios";
 import React, { useState } from "react";
 import laptop from "../Utils/laptop.avif";
-import logo from "../Utils/logo.png";
+import logo from "../Utils/Dell2.svg";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate, useParams } from "react-router-dom";
 

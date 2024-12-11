@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 
@@ -12,5 +11,6 @@ let transporter = nodemailer.createTransport({
         pass:process.env.email_pass,
     },
 });
+
 
 module.exports = transporter;
